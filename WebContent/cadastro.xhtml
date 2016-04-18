@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui" template="template.xhtml">
+
+	<ui:define name="title">Cadastro do Eleitor</ui:define>
+
+	<ui:define name="content">
+
+		<div id="formulario">
+			<h:form name="form">
+
+				<h1>Cadastrar Convidado</h1>
+
+				<p:messages id="messages" showDetail="false" autoUpdate="true"
+					closable="true" style="color:red;margin:8px;" />
+
+				<p class="nome">
+					<label for="nome">Nome:</label><br />
+					<input type="text" id="nome" 
+						placeholder="Inserir nome" required="true"
+						value="#{ConvidadoBean.convidado.nome}" />
+				</p>
+
+				<p class="endereco">
+					<label for="endereco">Endereço:</label><br />
+					<input type='text' id="endereco" 
+						placeholder="Inserir endereco" required="true"
+						value="#{ConvidadoBean.convidado.endereco}" />
+
+				</p>
+
+				<p>
+					<label for="cpf">CPF:</label><br />
+					<input type="text" id="cpf" placeholder="Inserir CPF"
+						required="true" value="#{ConvidadoBean.convidado.cpf}" />
+
+				</p>
+
+				<p>
+					<label for="rg">RG:</label><br />
+					<input type="text" id="rg" placeholder="Inserir RG"
+						required="true" value="#{ConvidadoBean.convidado.RG}" />
+
+				</p>
+
+				<p class="submit">
+					<p:commandButton value="Cadastrar"
+						actionListener="#{ConvidadoBean.inserir}" />
+				</p>
+
+			</h:form>
+
+		</div>
+
+	</ui:define>
+
+</ui:composition>
