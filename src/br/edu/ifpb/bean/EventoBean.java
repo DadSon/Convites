@@ -16,4 +16,8 @@ import br.edu.ifpb.entidade.Convidado;
 @ManagedBean(name = "eventoBean")
 public class EventoBean {
 
+public void verificar(Convidado convidado) throws IOException{
+}		
+
+
 }

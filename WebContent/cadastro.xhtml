@@ -5,7 +5,7 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui" template="template.xhtml">
 
-	<ui:define name="title">Cadastro do Eleitor</ui:define>
+	<ui:define name="title">Cadastro</ui:define>
 
 	<ui:define name="content">
 
@@ -19,14 +19,14 @@
 
 				<p class="nome">
 					<label for="nome">Nome:</label><br />
-					<input type="text" id="nome" 
+					<p:inputText type="text" id="nome" 
 						placeholder="Inserir nome" required="true"
 						value="#{ConvidadoBean.convidado.nome}" />
 				</p>
 
 				<p class="endereco">
 					<label for="endereco">Endereço:</label><br />
-					<input type='text' id="endereco" 
+					<p:inputText type='text' id="endereco" 
 						placeholder="Inserir endereco" required="true"
 						value="#{ConvidadoBean.convidado.endereco}" />
 
@@ -34,14 +34,14 @@
 
 				<p>
 					<label for="cpf">CPF:</label><br />
-					<input type="text" id="cpf" placeholder="Inserir CPF"
+					<p:inputText type="text" id="cpf" placeholder="Inserir CPF"
 						required="true" value="#{ConvidadoBean.convidado.cpf}" />
 
 				</p>
 
 				<p>
 					<label for="rg">RG:</label><br />
-					<input type="text" id="rg" placeholder="Inserir RG"
+					<p:inputText type="text" id="rg" placeholder="Inserir RG"
 						required="true" value="#{ConvidadoBean.convidado.RG}" />
 
 				</p>

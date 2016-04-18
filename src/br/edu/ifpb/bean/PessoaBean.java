@@ -12,7 +12,6 @@ public class PessoaBean {
 		List<Pessoa> pessoas = PessoaDAO.getInstance().getAll();
 
 		for (Pessoa pessoa: pessoas) {
-			//System.out.println(pessoa.getTituloVotacao());
 			System.out.println(pessoa.getNome());
 		}
 

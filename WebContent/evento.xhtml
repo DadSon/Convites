@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Verificar Convite</title>
+</head>
+<body>
+	
+	<h2>Verificar convite</h2>
+
+	<p>
+		<label for="rg">Nome:</label><br />
+		<p:inputText id="nome" type="text" placeholder="Inserir nome"
+			required="true" value="#{convidadoBean.convidado.nome}" />
+
+	</p>
+
+	<p class="submit">
+		<p:commandButton value="Verificar"
+			actionListener="#{convidadoBean.verificar}" />
+	</p>
+
+	</h:form>
+	</div>
+	</ui:define>
+
+	</ui:composition>
+</body>
+</html>

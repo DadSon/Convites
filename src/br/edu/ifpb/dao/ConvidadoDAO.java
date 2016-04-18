@@ -61,7 +61,7 @@ public class ConvidadoDAO extends GenericDAO<Integer, Convidado>{
 		return convidado;
 	}
 
-	public Convidado getByTitulo(Integer titulo) {
+	public Convidado getBycodigo(Integer codigo) {
 		
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		
@@ -69,8 +69,8 @@ public class ConvidadoDAO extends GenericDAO<Integer, Convidado>{
 		
 		try {
 					
-			Query query = session.createQuery("from Convidado where tituloVotacao_pessoa = :titulo");
-			query.setParameter("titulo", titulo);
+			Query query = session.createQuery("from Convidado where codigo_pessoa = :codigo");
+			query.setParameter("Codigo", codigo);
 			
 			convidado = (Convidado) query.uniqueResult();
 	        
@@ -82,7 +82,30 @@ public class ConvidadoDAO extends GenericDAO<Integer, Convidado>{
 		
 			session.close();
 		}
-		System.out.println("Aqui");
+		return convidado;
+
+	}
+public Convidado getBynome(Integer nome) {
+		
+		Session session = HibernateUtil.getSessionFactory().openSession();
+		
+		Convidado convidado = null;
+		
+		try {
+					
+			Query query = session.createQuery("from Convidado where nome_pessoa = :nome");
+			query.setParameter("Nome", nome);
+			
+			convidado = (Convidado) query.uniqueResult();
+	        
+		} catch (HibernateException hibernateException) {
+			
+			session.getTransaction().rollback();
+			
+		} finally {
+		
+			session.close();
+		}
 		return convidado;
 
 	}
